@@ -16,4 +16,13 @@ It helps you setup the following tools and services
 - To run this project :
 - `./webp_deployment_automation.rb create`
 
+We can also load the ruby script in the interactive ruby session.
+
+- `require './webp_deployment_automation.rb'`
+- `lambda_compressed_file_s3_storage='LAMBDA_FILE_STORAGE_BUCKET'`
+- `cloudfront_s3_bucket = 'YOUR_S3_IMAGE_BUCKET'`
+- `cloudformation_stack_name = 'CLOUDFORMATION_STACK_NAME'`
+- `webp_deploy = WebpDeploymentAutomation.new(lambda_compressed_file_s3_storage, cloudfront_s3_bucket, cloudformation_stack_name)`
+- Then call the methods from the ruby file.
+
 ---
