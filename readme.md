@@ -1,6 +1,6 @@
 # Webp Deployment Automation
 
-The project will help you with the deployment of various AWS services, which finally helps you converting the JPEG image into the webp file.
+The project will help you with the deployment of various AWS services, which finally helps you automatically converting JPEG images into WebP on the fly (and storing a cache). It requires an existing S3 bucket. It also supports dimension queries to send the output image in a specific file size.
 
 It helps you setup the following tools and services
 
