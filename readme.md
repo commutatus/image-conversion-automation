@@ -37,3 +37,8 @@ We can also deploy the same using the shell script.
 
 - Once deployed you can send requests to the Cloudfront distribution and if the user agent allows WebP, the response will contain a webP version of the JPG/PNG image requested. 
 - The distribution will also return images of a specific dimension, you can append `?d=100x100`to the URL
+
+**References**
+
+- This script automates an item in the efficiency section of Commutatus' Awesome Framework. You can find all background details [here](https://awesome.commutatus.com/domains/engineering/efficient/cloudfront-image-conversion.html). 
+
