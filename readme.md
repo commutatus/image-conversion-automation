@@ -2,6 +2,8 @@
 
 The project will help you with the deployment of various AWS services, which finally helps you automatically converting JPEG images into WebP on the fly (and storing a cache). It requires an existing S3 bucket. It also supports dimension queries to send the output image in a specific file size.
 
+Usage of next-gen image formats can speed up your site and improve usability and SEO. Read an implementation blog [here](https://medium.com/commutatus/how-we-improved-the-performance-of-an-e-commerce-site-using-next-gen-image-formats-8bcff1bf5b19). 
+
 It helps you setup the following tools and services
 
 - Setup docker container
@@ -9,7 +11,6 @@ It helps you setup the following tools and services
 - Setup the cloudformation template. Which deploys the lambda function, creates IAM role, AWS logs.
 - Create the cloudfront distribution
 - Upadte the cloudfront distribution with the lambda function ARN.
-
 
 **Deployment**
 
@@ -32,4 +33,7 @@ We can also deploy the same using the shell script.
 ./webp-deployment.sh lambda_s3_bucket=lambda-image-conversion/image-conversion-test project_s3_bucket=image-webp-conversion-test4 cloudformation_stack_name=CloudformationStackName
 ```
 
----
+**Usage**
+
+- Once deployed you can send requests to the Cloudfront distribution and if the user agent allows WebP, the response will contain a webP version of the JPG/PNG image requested. 
+- The distribution will also return images of a specific dimension, you can append `?d=100x100`to the URL
