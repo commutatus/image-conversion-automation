@@ -25,4 +25,11 @@ We can also load the ruby script in the interactive ruby session.
 - `webp_deploy = WebpDeploymentAutomation.new(lambda_compressed_file_s3_storage, cloudfront_s3_bucket, cloudformation_stack_name)`
 - Then call the methods from the ruby file.
 
+
+We can also deploy the same using the shell script.
+
+```
+./webp-deployment.sh lambda_s3_bucket=lambda-image-conversion/image-conversion-test project_s3_bucket=image-webp-conversion-test4 cloudformation_stack_name=CloudformationStackName
+```
+
 ---
